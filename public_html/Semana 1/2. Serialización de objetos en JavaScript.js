@@ -4,8 +4,8 @@
  operaciones) y serializarlo de la forma más "universal" posible usando JSON. 
  Hacer otro script que instancie ese objeto desde el fichero.
  */
-
-var json = {
+//Inicializando con algunos valores el objeto Json.
+var jsonPrueba = {
     key1: "value1",
     key2: {key3: "value2"},
     key4: {
@@ -13,7 +13,19 @@ var json = {
     }
 };
 
-var objectJson = json;
-console.log(objectJson.key1);       // return value1
-console.log(objectJson.key2.key3);  // return value2
-console.log(objectJson.key4.key5[1]); // return value6
+//Añadiendo más contenido al objeto json
+jsonPrueba["reforzando"]="javascript";
+jsonPrueba["otroObjeto"] = {"PeroSigo":"Creando objetos"};
+jsonPrueba["yArraysDeObjetos"]=[{"obj1":"valor1"},{"obj2":"valor2"},{"fin":"del ejercicio"}];
+
+//Convirtiendo a string con stringify el objeto creado anteriormente
+var jsonEnString = JSON.stringify(jsonPrueba);
+
+//Imprimiendo json por consola
+jsonEnString;
+
+//Volvemos a convertir el objeto a tipo json
+var jsonAgain = JSON.parse(jsonEnString);
+
+//Imprimimos un valor cualquiera
+jsonAgain["yArraysDeObjetos"][2]["fin"];
