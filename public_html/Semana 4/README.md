@@ -1,5 +1,8 @@
 **Para la ejecución del programa y poder probar todas las opciones es necesario usar CURL**
 
+0. Hay que tener instalado el módulo express, en caso de no tenerlo instalarlo con npm
+> npm install express
+
 1. Arrancamos el servidor:
 > node 1.APIRestNode.js
 
